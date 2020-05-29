@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_documentation element="table_value" label="Value Table" language="en" table="x_417679_bl_analtx_data">
+        <sys_documentation action="INSERT_OR_UPDATE">
+            <element>table_value</element>
+            <help/>
+            <hint/>
+            <label>Value Table</label>
+            <language>en</language>
+            <name>x_417679_bl_analtx_data</name>
+            <plural>Value Tables</plural>
+            <sys_class_name>sys_documentation</sys_class_name>
+            <sys_created_by>Aidan.Lovegrove</sys_created_by>
+            <sys_created_on>2020-05-29 18:25:39</sys_created_on>
+            <sys_id>0dc33a4207811010d318fd1e7c1ed0bc</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_name>Value Table</sys_name>
+            <sys_package display_value="Backlog Analytics" source="x_417679_bl_analtx">97d1624a07011010d318fd1e7c1ed0a1</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Backlog Analytics">97d1624a07011010d318fd1e7c1ed0a1</sys_scope>
+            <sys_update_name>sys_documentation_x_417679_bl_analtx_data_table_value_en</sys_update_name>
+            <sys_updated_by>Aidan.Lovegrove</sys_updated_by>
+            <sys_updated_on>2020-05-29 18:26:15</sys_updated_on>
+            <url/>
+            <url_target/>
+        </sys_documentation>
+    </sys_documentation>
+</record_update>

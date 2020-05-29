@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element attributes="update_synch=true" extends="sys_report_source" label="Backlog Analytic Execution" max_length="40" name="x_417679_bl_analtx_execution" type="collection">
+        <element label="Auto Report Execution" max_length="40" name="auto_report" read_only="true" type="boolean"/>
+        <element label="Definition" max_length="32" name="definition" reference="x_417679_bl_analtx_definition" type="reference"/>
+        <element attributes="ignore_filter_on_new=true" default="javascript:global.getNextObjNumberPadded();" label="Number" max_length="40" name="number" type="string"/>
+        <element label="Associated Report" max_length="32" name="sys_report" reference="sys_report" type="reference"/>
+        <index name="index">
+            <element name="definition"/>
+        </index>
+        <index name="index2">
+            <element name="sys_report"/>
+        </index>
+    </element>
+</database>
