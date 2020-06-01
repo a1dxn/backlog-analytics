@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
     <sys_script_include action="INSERT_OR_UPDATE">
-        <access>package_private</access>
+        <access>public</access>
         <active>true</active>
         <api_name>x_417679_bl_analtx.BacklogAnalytics</api_name>
         <caller_access>1</caller_access>
@@ -9,31 +9,350 @@
         <name>BacklogAnalytics</name>
         <script><![CDATA[var BacklogAnalytics = Class.create();
 BacklogAnalytics.prototype = {
-    initialize: function() {
-    },
-
-	getNextOrder : function(table) {
-		var gr = new GlideRecord(table);
-		gr.orderByDesc('order');
-		gr.setLimit(1);
-		gr.query();
-		if(gr.next()) return gr.getValue('order') + 100;
-		else return 100;
+	initialize: function() {
 	},
 	
-    type: 'BacklogAnalytics'
+	/*
+	@param execution : GlideRecord or string sys_id of execution record
+	@return string sys_id of report record
+	*/
+	createReport : function(execution) {
+		var e = this.getRecord(execution,'x_417679_bl_analtx_execution'),
+			t = new BLReportTemplate();
+		
+		var r = new GlideRecord('x_417679_bl_analtx_report');
+			r.initialize();
+			r.title = e.name;
+			r.sys_name = e.name;
+			r.report_source = e.sys_id;
+			r.field_list = t.getFieldList().toString();
+		for(var field in t.template) r[field] = t.template[field];
+			
+		return r.insert();
+	},
+
+	/*
+	@param definition : GlideRecord or String sys_id of definition record
+	@return string sys_id of new/updated special auto report execution
+	*/
+	updateAutoReportExecution : function(definition) {
+		var d = this.getRecord(definition,'x_417679_bl_analtx_definition');
+
+		var ex = new GlideRecord('x_417679_bl_analtx_execution');
+		var f = ex.get(d.auto_execution);
+		if(!f) ex.initialize();
+			ex.definition = d.sys_id;
+			ex.filter = "execution="+d.latest_execution;
+			ex.auto_report = true;
+			ex.state = '-1';
+		var r = f ? ex.update() : ex.insert();
+		return this._log((f?'Existing auto report execution updated ':'New auto report execution created ')+r+' for definition '+d.sys_id,r);
+	},
+
+	/*
+	@param definition : GlideRecord or string sys_id of definition record
+	@return nothing
+	*/
+	updateDefLatestExecution : function(definition) {
+		var d = this.getRecord(definition,'x_417679_bl_analtx_definition');
+		
+		var gr = new GlideRecord('x_417679_bl_analtx_execution');
+		gr.addQuery('definition='+d.sys_id);
+		gr.orderByDesc('sys_created_on');
+		gr.query();
+		if(gr.next()) d.latest_execution = gr.sys_id;
+		else d.latest_execution = '';
+		d.update();
+		if(!d.latest_execution.nil()) this._log('Definition '+d.sys_id+' has been updatd with latest execution '+gr.sys_id);
+		else this._log('Definition '+d.sys_id+' has no latest execution.');
+	},
+	
+	executeNow : function(definition,manual) {
+		try {
+			var d = this.getRecord(definition,'x_417679_bl_analtx_definition');
+
+			var e = new GlideRecord('x_417679_bl_analtx_execution');
+			e.initialize();
+			e.definition = d.sys_id;
+			e.state = '1';
+			if(manual) e.description = "Manually executed by "+gs.getUserDisplayName();
+			return this._log('New execution created for definition '+d.sys_id, e.insert());
+		} catch(e) {
+			this._log('[executeNow] Error thrown. \n'+e.message+'\n\n'+e.stack);
+			gs.addErrorMessage('An error occured creating a new execution for this definition.');
+		}
+	},
+
+	/*
+	@param definition : GlideRecord or String sys_id of definition record
+	@param execution : GlideRecord or string sys_id of execution record
+	@return object of stats collected
+	*/
+	generateExecutionData : function(execution) {
+		try {
+			var e = this.getRecord(execution,'x_417679_bl_analtx_execution'),
+				d = this.getRecord(e.getValue('definition'),'x_417679_bl_analtx_definition'),
+				tds = this.getTrends(d), now = new GlideDateTime().getNumericValue(), 
+				stats = {}, endData = [];
+			
+			this.setState(e,2);
+
+			//Generate statistics
+			var rec = new GlideRecord(d.table);
+				rec.addQuery(d.condition);
+				rec.query();
+			while(rec.next()) {
+				var trend_by = new GlideDateTime(rec.getValue(d.trend_by)).getNumericValue(),
+					group_by = rec.getValue(d.group_by),
+					decision = this.decideRange(now - trend_by, tds);
+				if(group_by=='') group_by = '/none/';
+				if(decision=='discard') continue;
+				if(stats[group_by]==null)
+					stats[group_by] = { //create initial stat data and trends template
+						field_value : group_by,
+						display_value : rec[d.group_by].getDisplayValue(),
+						table_value : this.getGroupByRef(rec.getElement(d.group_by)),
+						trends : this._copyObj(tds.trends)
+					};
+				//push stat trend data
+				stats[group_by].trends[decision].count++;
+				stats[group_by].trends[decision].records.push(rec.getValue('sys_id'));
+			}
+			//Create data records
+			for(var a in stats) {
+				for(var i=0;i<tds.order.length;i++) endData.push(insert(stats[a],tds.order[i]));
+			}
+			
+			this.setState(e,3);
+
+
+			return this._log('Generated '+endData.length+' data records for execution '+execution+': '+endData.toString(),stats);
+			/*END*/
+		} catch(e) {
+			return this._log('[generateExecutionData] Error thrown. \n'+e.message+'\n\n'+e.stack,'*ERR*');
+		}
+		
+		function insert(stat,trend_sys) {
+			var dr = new GlideRecord('x_417679_bl_analtx_data');
+				dr.initialize();
+				//global data
+				dr.execution = e.sys_id;
+				dr.related_trend = trend_sys;
+				dr.field_value = stat.field_value;
+				dr.display_value = stat.display_value;
+			if(stat.table_value!='') {
+				dr.record_value = stat.field_value;
+				dr.table_value = stat.table_value;
+			}
+				//trend specific data
+				dr.trend_range = stat.trends[trend_sys].label;
+				dr.count = stat.trends[trend_sys].count;
+			var d_sys = dr.insert();
+			
+			//if task is base table, create relationship between trend stat and task
+			if(new global.TableUtils(rec.getTableName()).getAbsoluteBase()=='task')
+				stat.trends[trend_sys].records.forEach(function(r,i){
+					var rel = new GlideRecord('x_417679_bl_analtx_m2m_data_tasks');
+						rel.initialize();
+						rel.bl_analtx_data = d_sys;
+						rel.task = r;
+						rel.insert();
+				});
+			return d_sys;
+		}
+		
+	},
+
+	decideRange : function(v, tds) {
+		for(var i=0;i<tds.order.length;i++)
+			if(v<=tds.trends[tds.order[i]].upper_limit_dur) return tds.order[i];
+			
+		var ts = '', c=0;
+		for(var t in tds.trends) ts+= '['+(c++)+']'+tds.trends[t].upper_limit_dur+', ';
+		return this._log('Could not make decision for value '+v+' in limits= '+ts,'discard');
+	},
+
+	/*
+	Provides reference field table name
+
+	@param e : GlideElement of GlideRecord
+	@return string table name OR empty
+	*/	
+	getGroupByRef : function(e) {
+		var type = e.getED().getInternalType();
+		if(type=='reference' || type=='document_field')
+			return e.getReferenceTable();
+		else return '';
+	},
+
+	/*
+	@param execution : GlideRecord or string sys_id of execution record
+	@return boolean has data records associated with execution
+	*/
+	hasData : function(execution) {
+		var e = this.getRecord(execution,'x_417679_bl_analtx_execution');
+		var gr = new GlideRecord('x_417679_bl_analtx_data');
+			gr.addQuery('execution='+e.sys_id);
+			gr.setLimit(1);
+			gr.query();
+		return gr.hasNext();
+	},
+	
+	/*
+	@param execution : GlideRecord or string sys_id of execution record
+	@param extraCondition : add extra condition to data record query
+	@return integer sum of count field
+	*/
+	sumExecutionData : function(execution, extraCondition) {
+		var e = this.getRecord(execution,'x_417679_bl_analtx_execution');
+		
+		var ga = new GlideAggregate('x_417679_bl_analtx_data');
+			ga.addQuery('execution='+e.sys_id+(extraCondition!=null ? '^'+extraCondition : ''));
+			ga.addAggregate('SUM', 'count');
+			ga.query();
+		if(ga.next()) return ga.getAggregate('SUM', 'count');
+		else return this._log('Unable to get sum of execution data for '+e.number+'. extraCondition='+extraCondition,0);
+		
+	},
+	
+	/*
+	@param execution : GlideRecord or string sys_id of execution record
+	@param order : if 0/null order by field value, else by trend label
+	@return object of results.  order=0/null = { field_value1:{display_value:<display_value>, trend_range1:<count>, trend_range2:<count>} }
+								order!= 0/null = { trend_range1:{field_value1:{count:<count>, display_name:<display_name>}}, trend_range2:.... }
+	*/
+	fetchExecutionData : function(execution, order) {
+		var e = this.getRecord(execution,'x_417679_bl_analtx_execution'),
+			par1 = order==0||order==null ? 'field_value' : 'trend_range',
+			par2 = order==0||order==null ? 'trend_range' : 'field_value',
+			result = {};
+		
+		var gr = new GlideRecord('x_417679_bl_analtx_data');
+			gr.addQuery('execution='+e.sys_id);
+			gr.query();
+		while(gr.next()) {
+			var v1 = gr.getValue(par1), v2 = gr.getValue(par2);
+			if(result[v1]==null) result[v1] = {};
+			if(order==0||order==null) {
+				if(result[v1].display_value==null) result[v1].display_value = gr.getValue('display_value');
+				result[v1][v2] = gr.getValue('count');
+			} else {
+				if(result[v1][v2].display_value==null) result[v1][v2].display_value = gr.getValue('display_value');
+				result[v1][v2].count = gr.getValue('count');
+			}
+		}
+		return result;
+	},
+	
+	/*
+	@param execution : GlideRecord or string sys_id of execution record
+	@param attachment : if true, add CSV attachment to execution record, else false/null do nothing
+	@return string CSV
+	*/
+	generateCSV : function(execution,attachment) {
+		var e = this.getRecord(execution,'x_417679_bl_analtx_execution'),
+			tds = this.getTrends(e.getValue('definition')),
+			data = this.fetchExecutionData(e), s = '"', sn = ',"';
+		
+		var csvOut = '"Display Value","Field Value"';
+		for(var i=0;i<tds.order.length;i++) csvOut += (sn+tds.trends[tds.order[i]].label+s); //Create header from trend labels
+		for(var field_value in data) {
+			csvOut += '\r\n' + s+data[field_value].display_value+s + sn+field_value+s;
+			for(i=0;i<tds.order.length;i++) csvOut += sn+data[field_value][tds.trends[tds.order[i]].label]+s;
+		}
+		
+		if(attachment) { //create attachment if asked for
+			var att = new GlideSysAttachment();
+			att.write(e, e.name, 'application/csv', csvOut);
+		}
+		
+		return this._log('CSV data generated for execution '+e.number+(attachment?' and was attached to the record.':'.'),csvOut);
+	},
+	
+	/*
+	@param definition : GlideRecord or String sys_id of definition record
+	@return object of order of trends and objects of trends data
+	*/
+	getTrends : function(definition) {
+		var def_sys = this.getRecord(definition,'x_417679_bl_analtx_definition'),
+			result = {order:[], trends:{}}, c = 0;
+
+		var gr = new GlideRecord('x_417679_bl_analtx_definition_trend');
+			gr.addQuery('definition='+def_sys.sys_id);
+			gr.orderBy('upper_limit_dur');
+			gr.query();
+		if(!gr.hasNext()) return this._log('Definition does not have any trends.',null,true);
+		while(gr.next()) {
+			var sys = gr.getValue('sys_id');
+			result.order[c] = sys;
+			result.trends[sys] = {
+				sys_id : sys,
+				definition : def_sys.sys_id,
+				label : gr.getValue('label'),
+				count : 0,
+				upper_limit_dur : new GlideDateTime(gr.getValue('upper_limit_dur')).getNumericValue(),
+				order : c,
+				records : [],
+			};
+		c++;
+		}
+		return this._log('Fetched '+c+' trends for definition '+def_sys.sys_id, result);
+	},
+	
+	/*
+	Allows methods to accept either string sys_id or GlideRecord of record. Checks GlideRecord class matches table parameter
+	@param record : string or GlideRecord of record
+	@param table : table/class name
+	@return verified GlideRecord object of record
+	*/
+	getRecord : function(record, table) {
+		var r = record;
+		if(table==null || table=='') this._log('Table parameter is null or empty',null,true);
+		if(typeof r=="string") {
+			r = new GlideRecord(table);
+			if(!r.get(record)) this._log('Unable to get record '+record+' on table '+table,null,true);
+		}
+
+		try {
+			if(r.getTableName()!=table) this._log('GlideRecord is of wrong class. given_table='+table+' record_table='+record.getTableName(),null,true);
+			if(!r.isValidRecord()) this._log('GlideRecord record is not valid. given_table='+table+' record_table='+record.getTableName(),null,true);
+		} catch(e) {
+			this._log('Record parameter is unacceptable data type. Could not verify validity of object',null,true);
+		}
+		
+		if(r!=record) this._log('[getRecord] Fetched "'+r.getDisplayValue()+'" ('+r.sys_id+') from "'+r.getClassDisplayValue()+'" ('+r.getTableName()+')');
+		return r;
+	},
+	
+	setState : function(execution, state) {
+		var e = this.getRecord(execution,'x_417679_bl_analtx_execution');
+		e.state = state.toString();
+		e.update();
+	},
+
+	_copyObj : function(obj) {
+		return JSON.parse(JSON.stringify(obj));
+	},
+
+	_log : function(msg, passthru,thro) {
+		gs.info(msg);
+		if(thro) throw msg;
+		return passthru;
+	},
+	
+	type: 'BacklogAnalytics'
 };]]></script>
         <sys_class_name>sys_script_include</sys_class_name>
         <sys_created_by>Aidan.Lovegrove</sys_created_by>
         <sys_created_on>2020-05-29 17:57:20</sys_created_on>
         <sys_id>97bc260a07411010d318fd1e7c1ed0c3</sys_id>
-        <sys_mod_count>2</sys_mod_count>
+        <sys_mod_count>54</sys_mod_count>
         <sys_name>BacklogAnalytics</sys_name>
         <sys_package display_value="Backlog Analytics" source="x_417679_bl_analtx">97d1624a07011010d318fd1e7c1ed0a1</sys_package>
         <sys_policy/>
         <sys_scope display_value="Backlog Analytics">97d1624a07011010d318fd1e7c1ed0a1</sys_scope>
         <sys_update_name>sys_script_include_97bc260a07411010d318fd1e7c1ed0c3</sys_update_name>
         <sys_updated_by>Aidan.Lovegrove</sys_updated_by>
-        <sys_updated_on>2020-05-29 17:57:56</sys_updated_on>
+        <sys_updated_on>2020-05-31 23:37:31</sys_updated_on>
     </sys_script_include>
 </record_update>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_security_acl_role">
+    <sys_security_acl_role action="INSERT_OR_UPDATE">
+        <sys_class_name>sys_security_acl_role</sys_class_name>
+        <sys_created_by>Aidan.Lovegrove</sys_created_by>
+        <sys_created_on>2020-05-31 22:56:45</sys_created_on>
+        <sys_id>e7f44e3207091010d318fd1e7c1ed0d0</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_417679_bl_analtx_report.snc_internal</sys_name>
+        <sys_package display_value="Backlog Analytics" source="x_417679_bl_analtx">97d1624a07011010d318fd1e7c1ed0a1</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Backlog Analytics">97d1624a07011010d318fd1e7c1ed0a1</sys_scope>
+        <sys_security_acl display_value="x_417679_bl_analtx_report">907f2d3a07851010d318fd1e7c1ed00c</sys_security_acl>
+        <sys_update_name>sys_security_acl_role_e7f44e3207091010d318fd1e7c1ed0d0</sys_update_name>
+        <sys_updated_by>Aidan.Lovegrove</sys_updated_by>
+        <sys_updated_on>2020-05-31 22:56:45</sys_updated_on>
+        <sys_user_role display_value="snc_internal" name="snc_internal">7fcaa702933002009c8579b4f47ffbde</sys_user_role>
+        <transaction_id>abf4463207091010d318fd1e7c1ed0ca</transaction_id>
+    </sys_security_acl_role>
+</record_update>

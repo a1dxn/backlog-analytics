@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element attributes="update_synch=true" extends="sys_report" label="Backlog Analytics Execution Report" max_length="40" name="x_417679_bl_analtx_report" type="collection"/>
+</database>

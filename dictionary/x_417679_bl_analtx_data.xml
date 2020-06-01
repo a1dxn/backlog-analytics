@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
-    <element label="Backlog Analytic Result" max_length="40" name="x_417679_bl_analtx_data" type="collection">
-        <element default="0" label="Count" max_length="40" name="count" type="integer"/>
-        <element label="Display Value" max_length="40" name="display_value" type="string"/>
-        <element label="Execution" max_length="32" name="execution" reference="x_417679_bl_analtx_execution" type="reference"/>
+    <element label="Backlog Analytic Data" max_length="40" name="x_417679_bl_analtx_data" type="collection">
+        <element default="0" label="Count" max_length="40" name="count" read_only="true" type="integer"/>
+        <element label="Value" max_length="150" name="display_value" read_only="true" type="string"/>
+        <element label="Execution" max_length="32" name="execution" read_only="true" reference="x_417679_bl_analtx_execution" reference_cascade_rule="cascade" type="reference"/>
         <element label="Field Value" max_length="40" name="field_value" type="string"/>
-        <element label="Value Record" max_length="32" name="record_value" type="document_id"/>
+        <element dependent="table_value" dependent_on_field="table_value" label="Value Record" max_length="32" name="record_value" read_only="true" type="document_id" use_dependent_field="true"/>
         <element label="related trend" max_length="32" name="related_trend" reference="x_417679_bl_analtx_definition_trend" type="reference"/>
         <element label="Value Table" max_length="80" name="table_value" type="table_name"/>
-        <element label="Trend Label" max_length="40" name="trend_range" type="string"/>
+        <element label="Trend Label" max_length="40" name="trend_range" read_only="true" type="string"/>
         <index name="index">
             <element name="execution"/>
         </index>

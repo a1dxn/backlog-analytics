@@ -1,13 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
     <element attributes="update_synch=true" extends="sys_report_source" label="Backlog Analytic Execution" max_length="40" name="x_417679_bl_analtx_execution" type="collection">
         <element label="Auto Report Execution" max_length="40" name="auto_report" read_only="true" type="boolean"/>
-        <element label="Definition" max_length="32" name="definition" reference="x_417679_bl_analtx_definition" type="reference"/>
-        <element attributes="ignore_filter_on_new=true" default="javascript:global.getNextObjNumberPadded();" label="Number" max_length="40" name="number" type="string"/>
-        <element label="Associated Report" max_length="32" name="sys_report" reference="sys_report" type="reference"/>
+        <element label="Definition" max_length="32" name="definition" read_only="true" reference="x_417679_bl_analtx_definition" reference_cascade_rule="restrict" type="reference"/>
+        <element attributes="encode_utf8=false" default="javascript:gs.getUserID();" dynamic_default_value="2fd8e97bef3221002841f7f775c0fbc1" label="Executed by" max_length="32" name="executed_by" read_only="true" reference="sys_user" type="reference" use_dynamic_default="true"/>
+        <element label="Locked" max_length="40" name="locked" type="boolean"/>
+        <element attributes="ignore_filter_on_new=true" default="javascript:global.getNextObjNumberPadded();" label="Number" max_length="40" name="number" read_only="true" type="string"/>
+        <element choice="3" default="0" label="State" max_length="40" name="state" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Error" value="-5"/>
+                <element inactive_on_update="false" label="Auto Reporting" sequence="-1" value="-1"/>
+                <element inactive_on_update="false" label="Not Started" sequence="0" value="0"/>
+                <element inactive_on_update="false" label="Queued" sequence="1" value="1"/>
+                <element inactive_on_update="false" label="Executing" sequence="2" value="2"/>
+                <element inactive_on_update="false" label="Finished" sequence="3" value="3"/>
+            </choice>
+        </element>
+        <element label="Associated Report" max_length="32" name="sys_report" reference="sys_report" reference_cascade_rule="clear" type="reference"/>
         <index name="index">
-            <element name="definition"/>
+            <element name="executed_by"/>
         </index>
         <index name="index2">
+            <element name="definition"/>
+        </index>
+        <index name="index3">
             <element name="sys_report"/>
         </index>
     </element>

@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>package_private</access>
+        <active>true</active>
+        <api_name>x_417679_bl_analtx.BLReportTemplate</api_name>
+        <caller_access>1</caller_access>
+        <client_callable>false</client_callable>
+        <description/>
+        <name>BLReportTemplate</name>
+        <script><![CDATA[var BLReportTemplate = Class.create();
+BLReportTemplate.prototype = {
+    initialize: function() {
+    },
+	
+	getFieldList : function() {
+		var fs = [];
+		
+		var gr = new GlideRecord('x_417679_bl_analtx_data');
+		gr.initialize();
+		for(var field in gr) {
+			try {
+				var f = gr.getElement(field);
+				if(!f.getED().isAutoOrSysID())
+					fs.push(field);
+			} catch(e) {}
+		}
+		return fs;
+	},
+	
+	/*
+	Report template used for producing pivot tables of backlog data.
+	
+	Fields to modify: title, sys_name, report_source, field_list 
+	
+		"title" : null,
+		"sys_name" : null,
+		"report_source":"e71b0f0e07c11010d318fd1e7c1ed052",
+		"field_list": "display_value,execution,field_value,record_value,related_trend,table_value,trend_range",
+	
+	*/
+	
+	template : {
+		//Configurations
+		"source_type": "source",
+		"filter":"x_417679_bl_analtx_data",
+		"table": "x_417679_bl_analtx_data",
+
+		"display_column_lines": "true",
+		"y_axis_display_grid": "true",
+		"y_axis_grid_dotted": "true",
+		"display_row_lines": "true",
+		"x_axis_display_grid": "true",
+		"x_axis_grid_dotted": "true",
+
+		"chart_title_style": "normal",
+		"title_horizontal_alignment": "center",
+		"title_vertical_alignment": "top",
+
+		"list_ui_view": "",
+		"other_threshold": "-1",
+		"others": "false",
+		"pivot_expanded": "true",
+		"decimal_precision": "2",
+
+		"roles": "public",
+		"user": "GLOBAL",
+
+		//Calculations
+		"type": "pivot_v2",
+		"aggregate" : "SUM",
+		"column": "trend_range",
+		"row": "display_value",
+		"compute_percent": "aggregate",
+		"sumfield": "count",
+		"direction": "minimize",
+
+		"custom_config": "{\"transforms\":[{\"transform\":{\"transform\":\"Reference\",\"name\":\"chart-subjects\"}}]}",
+	},
+
+    type: 'BLReportTemplate'
+};]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>Aidan.Lovegrove</sys_created_by>
+        <sys_created_on>2020-05-31 21:00:56</sys_created_on>
+        <sys_id>c4a969b207851010d318fd1e7c1ed0d6</sys_id>
+        <sys_mod_count>5</sys_mod_count>
+        <sys_name>BLReportTemplate</sys_name>
+        <sys_package display_value="Backlog Analytics" source="x_417679_bl_analtx">97d1624a07011010d318fd1e7c1ed0a1</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="Backlog Analytics">97d1624a07011010d318fd1e7c1ed0a1</sys_scope>
+        <sys_update_name>sys_script_include_c4a969b207851010d318fd1e7c1ed0d6</sys_update_name>
+        <sys_updated_by>Aidan.Lovegrove</sys_updated_by>
+        <sys_updated_on>2020-05-31 21:17:05</sys_updated_on>
+    </sys_script_include>
+</record_update>
