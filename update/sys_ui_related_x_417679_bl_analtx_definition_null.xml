@@ -3,7 +3,7 @@
         <sys_ui_related_list_entry action="INSERT_OR_UPDATE">
             <filter table="x_417679_bl_analtx_execution.definition">auto_report=false^EQ<item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/>
             </filter>
-            <list_id display_value="Backlog Analytic Definition - Default view" name="x_417679_bl_analtx_definition" related_list="NULL" sys_domain="global" view="Default view">deb2320207811010d318fd1e7c1ed063</list_id>
+            <list_id display_value="BA Definition - Default view" name="x_417679_bl_analtx_definition" related_list="NULL" sys_domain="global" view="Default view">deb2320207811010d318fd1e7c1ed063</list_id>
             <order_by/>
             <position>0</position>
             <related_list>x_417679_bl_analtx_execution.definition</related_list>
@@ -17,7 +17,7 @@
         </sys_ui_related_list_entry>
         <sys_ui_related_list_entry action="INSERT_OR_UPDATE">
             <filter/>
-            <list_id display_value="Backlog Analytic Definition - Default view" name="x_417679_bl_analtx_definition" related_list="NULL" sys_domain="global" view="Default view">deb2320207811010d318fd1e7c1ed063</list_id>
+            <list_id display_value="BA Definition - Default view" name="x_417679_bl_analtx_definition" related_list="NULL" sys_domain="global" view="Default view">deb2320207811010d318fd1e7c1ed063</list_id>
             <order_by/>
             <position>1</position>
             <related_list>REL:67bdac52374010008687ddb1967334ee</related_list>
@@ -30,7 +30,7 @@
             <sys_updated_on>2020-05-29 18:21:06</sys_updated_on>
         </sys_ui_related_list_entry>
         <sys_ui_related_list action="INSERT_OR_UPDATE">
-            <calculated_name>Backlog Analytic Definition - Default view</calculated_name>
+            <calculated_name>BA Definition - Default view</calculated_name>
             <filter/>
             <name>x_417679_bl_analtx_definition</name>
             <order_by/>

@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
-    <element attributes="update_synch=true" extends="sys_metadata" label="Backlog Analytic Definition" max_length="40" name="x_417679_bl_analtx_definition" type="collection">
+    <element attributes="update_synch=true" extends="sys_metadata" label="BA Definition" max_length="40" name="x_417679_bl_analtx_definition" type="collection">
         <element label="Auto Execution" max_length="32" name="auto_execution" read_only="true" reference="x_417679_bl_analtx_execution" type="reference"/>
         <element label="Automatically produce latest report" max_length="40" name="auto_update" type="boolean"/>
         <element dependent="table" dependent_on_field="table" label="Capture Condition" max_length="4000" name="condition" type="conditions" use_dependent_field="true"/>
-        <element dependent="table" dependent_on_field="table" label="Group by" max_length="80" name="group_by" type="field_name" use_dependent_field="true"/>
+        <element dependent="table" dependent_on_field="table" label="Group by" mandatory="true" max_length="80" name="group_by" type="field_name" use_dependent_field="true"/>
         <element attributes="encode_utf8=false" label="Latest Execution" max_length="32" name="latest_execution" read_only="true" reference="x_417679_bl_analtx_execution" type="reference"/>
         <element label="Name" max_length="40" name="name" type="string"/>
-        <element label="Table" max_length="80" name="table" type="table_name"/>
-        <element dependent="table" dependent_on_field="table" label="Trend by" max_length="80" name="trend_by" type="field_name" use_dependent_field="true"/>
+        <element label="Table" mandatory="true" max_length="80" name="table" type="table_name"/>
+        <element attributes="types=glide_date_time;glide_date" dependent="table" dependent_on_field="table" label="Trend by" mandatory="true" max_length="80" name="trend_by" type="field_name" use_dependent_field="true"/>
+        <element label="trigger" max_length="40" name="trigger" type="boolean"/>
         <element default="0" label="Execution Count" max_length="40" name="x_count" read_only="true" type="integer"/>
         <index name="index">
             <element name="auto_execution"/>

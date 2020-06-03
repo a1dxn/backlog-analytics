@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="x_417679_bl_analtx_execution">
+    <x_417679_bl_analtx_execution action="DELETE">
+        <auto_report>false</auto_report>
+        <definition display_value="Incidents by Technology Group">03f03e4e07411010d318fd1e7c1ed0c6</definition>
+        <description>test</description>
+        <display>Incidents by Technology Group - 2020-05-30 17:02:46 (Backlog Analytic Result)</display>
+        <filter table="x_417679_bl_analtx_data">execution=405a671207455010d318fd1e7c1ed07f^EQ<item display_table="x_417679_bl_analtx_execution" display_value="Incidents by Technology Group - 2020-05-30 17:02:46" endquery="false" field="execution" goto="false" newquery="false" operator="=" or="false" value="405a671207455010d318fd1e7c1ed07f"/>
+            <item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/>
+        </filter>
+        <name>Incidents by Technology Group - 2020-05-30 17:02:46</name>
+        <number>BLX0000005</number>
+        <sys_class_name>x_417679_bl_analtx_execution</sys_class_name>
+        <sys_created_by>Aidan.Lovegrove</sys_created_by>
+        <sys_created_on>2020-05-30 17:02:46</sys_created_on>
+        <sys_id>405a671207455010d318fd1e7c1ed07f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Incidents by Technology Group - 2020-05-30 17:02:46</sys_name>
+        <sys_package display_value="Backlog Analytics" source="x_417679_bl_analtx">97d1624a07011010d318fd1e7c1ed0a1</sys_package>
+        <sys_policy/>
+        <sys_report/>
+        <sys_scope display_value="Backlog Analytics">97d1624a07011010d318fd1e7c1ed0a1</sys_scope>
+        <sys_update_name>x_417679_bl_analtx_execution_405a671207455010d318fd1e7c1ed07f</sys_update_name>
+        <sys_updated_by>Aidan.Lovegrove</sys_updated_by>
+        <sys_updated_on>2020-05-30 17:02:46</sys_updated_on>
+        <table>x_417679_bl_analtx_data</table>
+    </x_417679_bl_analtx_execution>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Backlog Analytics">97d1624a07011010d318fd1e7c1ed0a1</application>
+        <file_path/>
+        <instance_id>90ea7229dba17f04387021c4059619f4</instance_id>
+        <instance_name>dev85960</instance_name>
+        <name>x_417679_bl_analtx_execution_405a671207455010d318fd1e7c1ed07f</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="x_417679_bl_analtx_execution"><x_417679_bl_analtx_execution action="INSERT_OR_UPDATE"><auto_report>false</auto_report><definition display_value="Incidents by Technology Group">03f03e4e07411010d318fd1e7c1ed0c6</definition><description>test</description><display>Incidents by Technology Group - 2020-05-30 17:02:46 (Backlog Analytic Result)</display><filter table="x_417679_bl_analtx_data">execution=405a671207455010d318fd1e7c1ed07f^EQ<item display_table="x_417679_bl_analtx_execution" display_value="Incidents by Technology Group - 2020-05-30 17:02:46" endquery="false" field="execution" goto="false" newquery="false" operator="=" or="false" value="405a671207455010d318fd1e7c1ed07f"/><item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/></filter><name>Incidents by Technology Group - 2020-05-30 17:02:46</name><number>BLX0000005</number><sys_class_name>x_417679_bl_analtx_execution</sys_class_name><sys_created_by>Aidan.Lovegrove</sys_created_by><sys_created_on>2020-05-30 17:02:46</sys_created_on><sys_id>405a671207455010d318fd1e7c1ed07f</sys_id><sys_mod_count>0</sys_mod_count><sys_name>Incidents by Technology Group - 2020-05-30 17:02:46</sys_name><sys_package display_value="Backlog Analytics" source="x_417679_bl_analtx">97d1624a07011010d318fd1e7c1ed0a1</sys_package><sys_policy/><sys_report/><sys_scope display_value="Backlog Analytics">97d1624a07011010d318fd1e7c1ed0a1</sys_scope><sys_update_name>x_417679_bl_analtx_execution_405a671207455010d318fd1e7c1ed07f</sys_update_name><sys_updated_by>Aidan.Lovegrove</sys_updated_by><sys_updated_on>2020-05-30 17:02:46</sys_updated_on><table>x_417679_bl_analtx_data</table></x_417679_bl_analtx_execution></record_update>]]></payload>
+        <payload_hash>680760758</payload_hash>
+        <record_name>Incidents by Technology Group - 2020-05-30 17:02:46</record_name>
+        <reverted_from/>
+        <source>9bd1624a07011010d318fd1e7c1ed0a3</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>Aidan.Lovegrove</sys_created_by>
+        <sys_created_on>2020-05-30 17:02:46</sys_created_on>
+        <sys_id>3c6a6fd207455010d318fd1e7c1ed061</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>172668931090000001</sys_recorded_at>
+        <sys_updated_by>Aidan.Lovegrove</sys_updated_by>
+        <sys_updated_on>2020-05-30 17:02:46</sys_updated_on>
+        <type>Backlog Analytic Execution</type>
+        <update_guid>746a6fd2d345501056cdee617ae45661</update_guid>
+        <update_guid_history>746a6fd2d345501056cdee617ae45661:680760758</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="Incidents by Technology Group - 2020-05-30 17:02:46">1b49c48307015010d318fd1e7c1ed0ff</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>Aidan.Lovegrove</sys_created_by>
+        <sys_created_on>2020-06-01 08:34:49</sys_created_on>
+        <sys_db_object display_value="" name="x_417679_bl_analtx_execution">x_417679_bl_analtx_execution</sys_db_object>
+        <sys_id>69e879c850c145f0b90bd6b035cec100</sys_id>
+        <sys_metadata>405a671207455010d318fd1e7c1ed07f</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Incidents by Technology Group - 2020-05-30 17:02:46</sys_name>
+        <sys_package display_value="Backlog Analytics" source="x_417679_bl_analtx">97d1624a07011010d318fd1e7c1ed0a1</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Backlog Analytics">97d1624a07011010d318fd1e7c1ed0a1</sys_scope>
+        <sys_scope_delete display_value="">002343fe7a2a4fc680e3ecd7d23eba04</sys_scope_delete>
+        <sys_update_name>x_417679_bl_analtx_execution_405a671207455010d318fd1e7c1ed07f</sys_update_name>
+        <sys_update_version display_value="x_417679_bl_analtx_execution_405a671207455010d318fd1e7c1ed07f">3c6a6fd207455010d318fd1e7c1ed061</sys_update_version>
+        <sys_updated_by>Aidan.Lovegrove</sys_updated_by>
+        <sys_updated_on>2020-06-01 08:34:49</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

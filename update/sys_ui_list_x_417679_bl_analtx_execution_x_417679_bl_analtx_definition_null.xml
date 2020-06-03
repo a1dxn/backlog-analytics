@@ -3,32 +3,47 @@
         <sys_ui_list_element action="INSERT_OR_UPDATE">
             <average_value>false</average_value>
             <element>sys_created_on</element>
-            <list_id display_value="x_417679_bl_analtx_execution" element="NULL" name="x_417679_bl_analtx_execution" parent="x_417679_bl_analtx_definition" relationship="NULL" sys_domain="global" view="Default view">73d42b0a07451010d318fd1e7c1ed0f5</list_id>
+            <list_id display_value="x_417679_bl_analtx_execution" element="NULL" name="x_417679_bl_analtx_execution" parent="x_417679_bl_analtx_definition" relationship="NULL" sys_domain="global" view="Default view">24f11c4f07015010d318fd1e7c1ed0d9</list_id>
             <max_value>false</max_value>
             <min_value>false</min_value>
             <position>0</position>
             <sum>false</sum>
             <sys_created_by>Aidan.Lovegrove</sys_created_by>
-            <sys_created_on>2020-05-29 22:00:12</sys_created_on>
-            <sys_id>bfd42b0a07451010d318fd1e7c1ed0f5</sys_id>
+            <sys_created_on>2020-06-01 09:12:34</sys_created_on>
+            <sys_id>60f11c4f07015010d318fd1e7c1ed0da</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_updated_by>Aidan.Lovegrove</sys_updated_by>
-            <sys_updated_on>2020-05-29 22:00:12</sys_updated_on>
+            <sys_updated_on>2020-06-01 09:12:34</sys_updated_on>
         </sys_ui_list_element>
         <sys_ui_list_element action="INSERT_OR_UPDATE">
             <average_value>false</average_value>
             <element>sys_report</element>
-            <list_id display_value="x_417679_bl_analtx_execution" element="NULL" name="x_417679_bl_analtx_execution" parent="x_417679_bl_analtx_definition" relationship="NULL" sys_domain="global" view="Default view">73d42b0a07451010d318fd1e7c1ed0f5</list_id>
+            <list_id display_value="x_417679_bl_analtx_execution" element="NULL" name="x_417679_bl_analtx_execution" parent="x_417679_bl_analtx_definition" relationship="NULL" sys_domain="global" view="Default view">24f11c4f07015010d318fd1e7c1ed0d9</list_id>
             <max_value>false</max_value>
             <min_value>false</min_value>
             <position>1</position>
             <sum>false</sum>
             <sys_created_by>Aidan.Lovegrove</sys_created_by>
-            <sys_created_on>2020-05-29 22:00:12</sys_created_on>
-            <sys_id>37d42b0a07451010d318fd1e7c1ed0f6</sys_id>
+            <sys_created_on>2020-06-01 09:12:34</sys_created_on>
+            <sys_id>e4f11c4f07015010d318fd1e7c1ed0da</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_updated_by>Aidan.Lovegrove</sys_updated_by>
-            <sys_updated_on>2020-05-29 22:00:12</sys_updated_on>
+            <sys_updated_on>2020-06-01 09:12:34</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>state</element>
+            <list_id display_value="x_417679_bl_analtx_execution" element="NULL" name="x_417679_bl_analtx_execution" parent="x_417679_bl_analtx_definition" relationship="NULL" sys_domain="global" view="Default view">24f11c4f07015010d318fd1e7c1ed0d9</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>2</position>
+            <sum>false</sum>
+            <sys_created_by>Aidan.Lovegrove</sys_created_by>
+            <sys_created_on>2020-06-01 09:12:34</sys_created_on>
+            <sys_id>68f11c4f07015010d318fd1e7c1ed0da</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>Aidan.Lovegrove</sys_updated_by>
+            <sys_updated_on>2020-06-01 09:12:34</sys_updated_on>
         </sys_ui_list_element>
         <sys_ui_list action="INSERT_OR_UPDATE">
             <average_value>false</average_value>
@@ -42,10 +57,10 @@
             <sum>false</sum>
             <sys_class_name>sys_ui_list</sys_class_name>
             <sys_created_by>Aidan.Lovegrove</sys_created_by>
-            <sys_created_on>2020-05-29 22:00:12</sys_created_on>
+            <sys_created_on>2020-06-01 09:12:34</sys_created_on>
             <sys_domain>global</sys_domain>
             <sys_domain_path>/</sys_domain_path>
-            <sys_id>73d42b0a07451010d318fd1e7c1ed0f5</sys_id>
+            <sys_id>24f11c4f07015010d318fd1e7c1ed0d9</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_name>x_417679_bl_analtx_execution</sys_name>
             <sys_package display_value="Backlog Analytics" source="x_417679_bl_analtx">97d1624a07011010d318fd1e7c1ed0a1</sys_package>
@@ -53,7 +68,7 @@
             <sys_scope display_value="Backlog Analytics">97d1624a07011010d318fd1e7c1ed0a1</sys_scope>
             <sys_update_name>sys_ui_list_x_417679_bl_analtx_execution_x_417679_bl_analtx_definition_null</sys_update_name>
             <sys_updated_by>Aidan.Lovegrove</sys_updated_by>
-            <sys_updated_on>2020-05-29 22:00:12</sys_updated_on>
+            <sys_updated_on>2020-06-01 09:12:34</sys_updated_on>
             <sys_user/>
             <view display_value="Default view" name="NULL">Default view</view>
             <view_name/>

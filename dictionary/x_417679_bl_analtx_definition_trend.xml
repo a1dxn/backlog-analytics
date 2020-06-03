@@ -1,10 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
-    <element attributes="update_synch=true" extends="sys_metadata" label="Backlog Analytic Definition Trend" max_length="40" name="x_417679_bl_analtx_definition_trend" type="collection">
-        <element label="Definition" max_length="32" name="definition" reference="x_417679_bl_analtx_definition" type="reference"/>
+    <element attributes="update_synch=true" extends="sys_metadata" label="BA Definition Trend" max_length="40" name="x_417679_bl_analtx_definition_trend" type="collection">
+        <element label="Definition" max_length="32" name="definition" reference="x_417679_bl_analtx_definition" reference_cascade_rule="cascade" type="reference"/>
         <element label="Label" max_length="40" name="label" type="string"/>
-        <element label="Order" max_length="40" name="order" type="integer"/>
         <element label="Upper Limit (Duration)" max_length="40" name="upper_limit_dur" type="glide_duration"/>
-        <element label="Upper Limit (Int)" max_length="40" name="upper_limit_int" type="integer"/>
         <index name="index">
             <element name="definition"/>
         </index>

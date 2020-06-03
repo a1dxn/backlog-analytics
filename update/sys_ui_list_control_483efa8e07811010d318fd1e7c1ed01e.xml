@@ -21,7 +21,7 @@
         <omit_drilldown_link>true</omit_drilldown_link>
         <omit_edit_button>true</omit_edit_button>
         <omit_filters>false</omit_filters>
-        <omit_if_empty>false</omit_if_empty>
+        <omit_if_empty>true</omit_if_empty>
         <omit_links>true</omit_links>
         <omit_new_button>true</omit_new_button>
         <related_list>x_417679_bl_analtx_data.execution</related_list>
@@ -31,7 +31,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>483efa8e07811010d318fd1e7c1ed01e</sys_id>
-        <sys_mod_count>3</sys_mod_count>
+        <sys_mod_count>4</sys_mod_count>
         <sys_name>x_417679_bl_analtx_execution</sys_name>
         <sys_overrides display_value="">global</sys_overrides>
         <sys_package display_value="Backlog Analytics" source="x_417679_bl_analtx">97d1624a07011010d318fd1e7c1ed0a1</sys_package>
@@ -39,6 +39,6 @@
         <sys_scope display_value="Backlog Analytics">97d1624a07011010d318fd1e7c1ed0a1</sys_scope>
         <sys_update_name>sys_ui_list_control_483efa8e07811010d318fd1e7c1ed01e</sys_update_name>
         <sys_updated_by>Aidan.Lovegrove</sys_updated_by>
-        <sys_updated_on>2020-05-31 22:12:44</sys_updated_on>
+        <sys_updated_on>2020-06-01 08:43:21</sys_updated_on>
     </sys_ui_list_control>
 </record_update>

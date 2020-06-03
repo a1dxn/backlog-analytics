@@ -28,7 +28,14 @@
         <name>Execute Now</name>
         <onclick/>
         <order>100</order>
-        <script><![CDATA[var r = new BacklogAnalytics().executeNow(current,true);]]></script>
+        <script><![CDATA[try {
+	var ba = new BacklogAnalytics(current);
+	ba.canExecute();
+	action.setRedirectURL('x_417679_bl_analtx_execution.do?sys_id='+ba.executeNow(true));
+} catch(e) {
+	gs.addErrorMessage(e.message);
+	action.setRedirectURL(current);
+}]]></script>
         <show_insert>false</show_insert>
         <show_multiple_update>false</show_multiple_update>
         <show_query>false</show_query>
@@ -39,7 +46,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>06b3813e07c11010d318fd1e7c1ed010</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_mod_count>4</sys_mod_count>
         <sys_name>Execute Now</sys_name>
         <sys_overrides/>
         <sys_package display_value="Backlog Analytics" source="x_417679_bl_analtx">97d1624a07011010d318fd1e7c1ed0a1</sys_package>
@@ -47,7 +54,7 @@
         <sys_scope display_value="Backlog Analytics">97d1624a07011010d318fd1e7c1ed0a1</sys_scope>
         <sys_update_name>sys_ui_action_06b3813e07c11010d318fd1e7c1ed010</sys_update_name>
         <sys_updated_by>Aidan.Lovegrove</sys_updated_by>
-        <sys_updated_on>2020-05-31 18:13:24</sys_updated_on>
+        <sys_updated_on>2020-06-03 22:24:24</sys_updated_on>
         <table>x_417679_bl_analtx_definition</table>
         <ui11_compatible>true</ui11_compatible>
         <ui16_compatible>false</ui16_compatible>

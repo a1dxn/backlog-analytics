@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
-    <element attributes="update_synch=true" extends="sys_report_source" label="Backlog Analytic Execution" max_length="40" name="x_417679_bl_analtx_execution" type="collection">
+    <element attributes="update_synch=true" extends="sys_report_source" label="BA Execution" max_length="40" name="x_417679_bl_analtx_execution" type="collection">
         <element label="Auto Report Execution" max_length="40" name="auto_report" read_only="true" type="boolean"/>
         <element label="Definition" max_length="32" name="definition" read_only="true" reference="x_417679_bl_analtx_definition" reference_cascade_rule="restrict" type="reference"/>
+        <element label="Error Message" max_length="500" name="error_message" type="string"/>
         <element attributes="encode_utf8=false" default="javascript:gs.getUserID();" dynamic_default_value="2fd8e97bef3221002841f7f775c0fbc1" label="Executed by" max_length="32" name="executed_by" read_only="true" reference="sys_user" type="reference" use_dynamic_default="true"/>
         <element label="Locked" max_length="40" name="locked" type="boolean"/>
         <element attributes="ignore_filter_on_new=true" default="javascript:global.getNextObjNumberPadded();" label="Number" max_length="40" name="number" read_only="true" type="string"/>

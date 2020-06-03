@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_security_acl_role">
+    <sys_security_acl_role action="DELETE">
+        <sys_class_name>sys_security_acl_role</sys_class_name>
+        <sys_created_by>Aidan.Lovegrove</sys_created_by>
+        <sys_created_on>2020-06-03 10:29:32</sys_created_on>
+        <sys_id>9bb636630789d010d318fd1e7c1ed0ac</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_417679_bl_analtx_report.report_admin</sys_name>
+        <sys_package display_value="Backlog Analytics" source="x_417679_bl_analtx">97d1624a07011010d318fd1e7c1ed0a1</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Backlog Analytics">97d1624a07011010d318fd1e7c1ed0a1</sys_scope>
+        <sys_security_acl display_value="x_417679_bl_analtx_report">d7b636630789d010d318fd1e7c1ed0a8</sys_security_acl>
+        <sys_update_name>sys_security_acl_role_9bb636630789d010d318fd1e7c1ed0ac</sys_update_name>
+        <sys_updated_by>Aidan.Lovegrove</sys_updated_by>
+        <sys_updated_on>2020-06-03 10:29:32</sys_updated_on>
+        <sys_user_role display_value="report_admin" name="report_admin">fdc4e4540a0a0b8e0136581790249b7a</sys_user_role>
+        <transaction_id/>
+    </sys_security_acl_role>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Backlog Analytics">97d1624a07011010d318fd1e7c1ed0a1</application>
+        <file_path/>
+        <instance_id>90ea7229dba17f04387021c4059619f4</instance_id>
+        <instance_name>dev85960</instance_name>
+        <name>sys_security_acl_role_9bb636630789d010d318fd1e7c1ed0ac</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_security_acl_role"><sys_security_acl_role action="INSERT_OR_UPDATE"><sys_class_name>sys_security_acl_role</sys_class_name><sys_created_by>Aidan.Lovegrove</sys_created_by><sys_created_on>2020-06-03 10:29:32</sys_created_on><sys_id>9bb636630789d010d318fd1e7c1ed0ac</sys_id><sys_mod_count>0</sys_mod_count><sys_name>x_417679_bl_analtx_report.report_admin</sys_name><sys_package display_value="Backlog Analytics" source="x_417679_bl_analtx">97d1624a07011010d318fd1e7c1ed0a1</sys_package><sys_policy/><sys_scope display_value="Backlog Analytics">97d1624a07011010d318fd1e7c1ed0a1</sys_scope><sys_security_acl display_value="x_417679_bl_analtx_report">d7b636630789d010d318fd1e7c1ed0a8</sys_security_acl><sys_update_name>sys_security_acl_role_9bb636630789d010d318fd1e7c1ed0ac</sys_update_name><sys_updated_by>Aidan.Lovegrove</sys_updated_by><sys_updated_on>2020-06-03 10:29:32</sys_updated_on><sys_user_role display_value="report_admin" name="report_admin">fdc4e4540a0a0b8e0136581790249b7a</sys_user_role><transaction_id/></sys_security_acl_role></record_update>]]></payload>
+        <payload_hash>-1204171159</payload_hash>
+        <record_name>x_417679_bl_analtx_report.report_admin</record_name>
+        <reverted_from/>
+        <source>9bd1624a07011010d318fd1e7c1ed0a3</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>Aidan.Lovegrove</sys_created_by>
+        <sys_created_on>2020-06-03 10:29:32</sys_created_on>
+        <sys_id>27b636630789d010d318fd1e7c1ed0b0</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>17279ba9ec00000001</sys_recorded_at>
+        <sys_updated_by>Aidan.Lovegrove</sys_updated_by>
+        <sys_updated_on>2020-06-03 10:29:32</sys_updated_on>
+        <type>Access Roles</type>
+        <update_guid>6fb63663fa89d01074ecf550e5300baf</update_guid>
+        <update_guid_history>6fb63663fa89d01074ecf550e5300baf:-1204171159</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="x_417679_bl_analtx_report.report_admin">03625dbf07c11410d318fd1e7c1ed078</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>Aidan.Lovegrove</sys_created_by>
+        <sys_created_on>2020-06-03 21:49:43</sys_created_on>
+        <sys_db_object display_value="" name="sys_security_acl_role">sys_security_acl_role</sys_db_object>
+        <sys_id>34f05c023cb54c4c8237103568faa439</sys_id>
+        <sys_metadata>9bb636630789d010d318fd1e7c1ed0ac</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_417679_bl_analtx_report.report_admin</sys_name>
+        <sys_package display_value="Backlog Analytics" source="x_417679_bl_analtx">97d1624a07011010d318fd1e7c1ed0a1</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Backlog Analytics">97d1624a07011010d318fd1e7c1ed0a1</sys_scope>
+        <sys_scope_delete display_value="">002343fe7a2a4fc680e3ecd7d23eba04</sys_scope_delete>
+        <sys_update_name>sys_security_acl_role_9bb636630789d010d318fd1e7c1ed0ac</sys_update_name>
+        <sys_update_version display_value="sys_security_acl_role_9bb636630789d010d318fd1e7c1ed0ac">27b636630789d010d318fd1e7c1ed0b0</sys_update_version>
+        <sys_updated_by>Aidan.Lovegrove</sys_updated_by>
+        <sys_updated_on>2020-06-03 21:49:43</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

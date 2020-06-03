@@ -30,10 +30,15 @@
         <rest_variables/>
         <role_conditions/>
         <script><![CDATA[(function executeRule(current, previous /*null when async*/) {
-	var result = new BacklogAnalytics().generateExecutionData(current);
-	if(result=='*ERR*') {
+	current.error_message = '';
+	try {
+		new BacklogAnalytics(current).generateExecutionData();
+	} catch(e) {
 		current.state = '-5';
+		current.error_message = new GlideDateTime().getDisplayValue() + ': '+e.message;
+		try { current.error_message += '\nMetadata:'+e.getMetadata(true); }catch(e){}
 		current.update();
+		gs.addErrorMessage('An error occured trying to generate data for execution '+current.number);
 	}
 
 })(current, previous);]]></script>
@@ -43,7 +48,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>343218f607011010d318fd1e7c1ed068</sys_id>
-        <sys_mod_count>5</sys_mod_count>
+        <sys_mod_count>17</sys_mod_count>
         <sys_name>Run!</sys_name>
         <sys_overrides/>
         <sys_package display_value="Backlog Analytics" source="x_417679_bl_analtx">97d1624a07011010d318fd1e7c1ed0a1</sys_package>
@@ -51,9 +56,9 @@
         <sys_scope display_value="Backlog Analytics">97d1624a07011010d318fd1e7c1ed0a1</sys_scope>
         <sys_update_name>sys_script_343218f607011010d318fd1e7c1ed068</sys_update_name>
         <sys_updated_by>Aidan.Lovegrove</sys_updated_by>
-        <sys_updated_on>2020-05-31 18:21:23</sys_updated_on>
+        <sys_updated_on>2020-06-03 13:15:00</sys_updated_on>
         <template/>
-        <when>async</when>
+        <when>after</when>
     </sys_script>
     <sys_translated_text action="delete_multiple" query="documentkey=343218f607011010d318fd1e7c1ed068"/>
 </record_update>
