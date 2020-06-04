@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_script_client">
+    <sys_script_client action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <applies_extended>false</applies_extended>
+        <condition/>
+        <description/>
+        <field>definition</field>
+        <global>true</global>
+        <isolate_script>true</isolate_script>
+        <messages/>
+        <name>Build default name</name>
+        <order/>
+        <script><![CDATA[function onChange(control, oldValue, newValue, isLoading, isTemplate) {
+	if(isLoading && !g_form.isNewRecord()) return;
+	g_form.setValue('name', 'Scheduled Execution of '+g_form.getDisplayBox('definition').value); 
+}]]></script>
+        <sys_class_name>sys_script_client</sys_class_name>
+        <sys_created_by>Aidan.Lovegrove</sys_created_by>
+        <sys_created_on>2020-06-04 10:18:53</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>04cc77fb078d1410d318fd1e7c1ed03f</sys_id>
+        <sys_mod_count>5</sys_mod_count>
+        <sys_name>Build default name</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Backlog Analytics" source="x_417679_bl_analtx">97d1624a07011010d318fd1e7c1ed0a1</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Backlog Analytics">97d1624a07011010d318fd1e7c1ed0a1</sys_scope>
+        <sys_update_name>sys_script_client_04cc77fb078d1410d318fd1e7c1ed03f</sys_update_name>
+        <sys_updated_by>Aidan.Lovegrove</sys_updated_by>
+        <sys_updated_on>2020-06-04 10:25:54</sys_updated_on>
+        <table>x_417679_bl_analtx_scheduled_execution</table>
+        <type>onChange</type>
+        <ui_type>0</ui_type>
+        <view/>
+    </sys_script_client>
+</record_update>

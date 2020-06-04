@@ -41,7 +41,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>e693543a07011010d318fd1e7c1ed0e9</sys_id>
-        <sys_mod_count>6</sys_mod_count>
+        <sys_mod_count>7</sys_mod_count>
         <sys_name>Auto generate CSV</sys_name>
         <sys_overrides/>
         <sys_package display_value="Backlog Analytics" source="x_417679_bl_analtx">97d1624a07011010d318fd1e7c1ed0a1</sys_package>
@@ -49,9 +49,9 @@
         <sys_scope display_value="Backlog Analytics">97d1624a07011010d318fd1e7c1ed0a1</sys_scope>
         <sys_update_name>sys_script_e693543a07011010d318fd1e7c1ed0e9</sys_update_name>
         <sys_updated_by>Aidan.Lovegrove</sys_updated_by>
-        <sys_updated_on>2020-06-03 22:26:33</sys_updated_on>
+        <sys_updated_on>2020-06-04 11:47:54</sys_updated_on>
         <template/>
-        <when>async</when>
+        <when>after</when>
     </sys_script>
     <sys_translated_text action="delete_multiple" query="documentkey=e693543a07011010d318fd1e7c1ed0e9"/>
 </record_update>

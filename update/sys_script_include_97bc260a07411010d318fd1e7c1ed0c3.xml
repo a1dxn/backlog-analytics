@@ -21,6 +21,17 @@ BacklogAnalytics.prototype = {
 
 	pfx : 'x_417679_bl_analtx_',
 	
+	getExecutionList : function() {
+		this._hasDef();
+		var exs = [];
+		var gr = new GlideRecord(this.pfx+'execution');
+		gr.addQuery('definition='+this.def.sys_id);
+		gr.query();
+		while(gr.next()) exs.push(gr.getValue('sys_id'));
+		
+		return exs.toString();
+	},
+	
 	/*
 	Create a report from an execution
 	@param update : (boolean) if true, updates the execution record. Otherwise do nothing
@@ -215,7 +226,7 @@ BacklogAnalytics.prototype = {
 			
 			if(attachment) { //create attachment if asked for
 				var att = new GlideSysAttachment();
-				att.write(this.ex, this.ex.name, 'application/csv', csvOut);
+				att.write(this.ex, this.ex.name+'.csv', 'application/csv', csvOut);
 			}
 			
 			return this._log('CSV data generated for execution '+this.ex.number+(attachment?' and was attached to the record.':'.'),csvOut);
@@ -520,13 +531,13 @@ BacklogAnalytics.prototype = {
         <sys_created_by>Aidan.Lovegrove</sys_created_by>
         <sys_created_on>2020-05-29 17:57:20</sys_created_on>
         <sys_id>97bc260a07411010d318fd1e7c1ed0c3</sys_id>
-        <sys_mod_count>97</sys_mod_count>
+        <sys_mod_count>99</sys_mod_count>
         <sys_name>BacklogAnalytics</sys_name>
         <sys_package display_value="Backlog Analytics" source="x_417679_bl_analtx">97d1624a07011010d318fd1e7c1ed0a1</sys_package>
         <sys_policy/>
         <sys_scope display_value="Backlog Analytics">97d1624a07011010d318fd1e7c1ed0a1</sys_scope>
         <sys_update_name>sys_script_include_97bc260a07411010d318fd1e7c1ed0c3</sys_update_name>
         <sys_updated_by>Aidan.Lovegrove</sys_updated_by>
-        <sys_updated_on>2020-06-03 22:20:53</sys_updated_on>
+        <sys_updated_on>2020-06-04 14:24:11</sys_updated_on>
     </sys_script_include>
 </record_update>

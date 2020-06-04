@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_archive_destroy">
+    <sys_archive_destroy action="DELETE">
+        <active>false</active>
+        <archive_duration>1970-01-01 00:00:30</archive_duration>
+        <description/>
+        <estimate_date>2020-06-04 18:28:46</estimate_date>
+        <name>..</name>
+        <record_estimate>0</record_estimate>
+        <sys_class_name>sys_archive_destroy</sys_class_name>
+        <sys_created_by>Aidan.Lovegrove</sys_created_by>
+        <sys_created_on>2020-06-04 18:26:31</sys_created_on>
+        <sys_id>0c7d218c07595410d318fd1e7c1ed0c5</sys_id>
+        <sys_mod_count>8</sys_mod_count>
+        <sys_name>..</sys_name>
+        <sys_package display_value="Backlog Analytics" source="x_417679_bl_analtx">97d1624a07011010d318fd1e7c1ed0a1</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Backlog Analytics">97d1624a07011010d318fd1e7c1ed0a1</sys_scope>
+        <sys_update_name>sys_archive_destroy_0c7d218c07595410d318fd1e7c1ed0c5</sys_update_name>
+        <sys_updated_by>Aidan.Lovegrove</sys_updated_by>
+        <sys_updated_on>2020-06-04 18:28:46</sys_updated_on>
+        <table>ar_x_417679_bl_analtx_data</table>
+        <total/>
+    </sys_archive_destroy>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Backlog Analytics">97d1624a07011010d318fd1e7c1ed0a1</application>
+        <file_path/>
+        <instance_id>90ea7229dba17f04387021c4059619f4</instance_id>
+        <instance_name>dev85960</instance_name>
+        <name>sys_archive_destroy_0c7d218c07595410d318fd1e7c1ed0c5</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_archive_destroy"><sys_archive_destroy action="INSERT_OR_UPDATE"><active>false</active><archive_duration>1970-01-01 00:00:30</archive_duration><description/><estimate_date>2020-06-04 18:28:46</estimate_date><name>..</name><record_estimate>0</record_estimate><sys_class_name>sys_archive_destroy</sys_class_name><sys_created_by>Aidan.Lovegrove</sys_created_by><sys_created_on>2020-06-04 18:26:31</sys_created_on><sys_id>0c7d218c07595410d318fd1e7c1ed0c5</sys_id><sys_mod_count>8</sys_mod_count><sys_name>..</sys_name><sys_package display_value="Backlog Analytics" source="x_417679_bl_analtx">97d1624a07011010d318fd1e7c1ed0a1</sys_package><sys_policy/><sys_scope display_value="Backlog Analytics">97d1624a07011010d318fd1e7c1ed0a1</sys_scope><sys_update_name>sys_archive_destroy_0c7d218c07595410d318fd1e7c1ed0c5</sys_update_name><sys_updated_by>Aidan.Lovegrove</sys_updated_by><sys_updated_on>2020-06-04 18:28:46</sys_updated_on><table>ar_x_417679_bl_analtx_data</table><total/></sys_archive_destroy></record_update>]]></payload>
+        <payload_hash>-634717252</payload_hash>
+        <record_name>..</record_name>
+        <reverted_from/>
+        <source>3cafa7fb074d1410d318fd1e7c1ed0f0</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>Aidan.Lovegrove</sys_created_by>
+        <sys_created_on>2020-06-04 18:28:46</sys_created_on>
+        <sys_id>090e698c07595410d318fd1e7c1ed061</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>1728097ba980000001</sys_recorded_at>
+        <sys_updated_by>Aidan.Lovegrove</sys_updated_by>
+        <sys_updated_on>2020-06-04 18:28:46</sys_updated_on>
+        <type>Archive Destroy Rule</type>
+        <update_guid>810e698c995954106c1b7ecb0b37ce61</update_guid>
+        <update_guid_history>810e698c995954106c1b7ecb0b37ce61:-634717252,6efda58cf1595410a64445e0baf084f1:-1134951979,46ada18c79595410ef94c944a0513bc0:1562636448,b49d6d4c3c59541010844af8f4e305c7:748448651,378da18c485954100c6814958a324399:-1603661026,1e8d218c3e595410f63b69870f9d4d4d:-829730896,4c8d294ced5954104ac24e67132236d1:1113126723</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>Aidan.Lovegrove</sys_created_by>
+        <sys_created_on>2020-06-04 18:29:14</sys_created_on>
+        <sys_db_object display_value="" name="sys_archive_destroy">sys_archive_destroy</sys_db_object>
+        <sys_id>007d6f42c83145798000e4831457c2f1</sys_id>
+        <sys_metadata>0c7d218c07595410d318fd1e7c1ed0c5</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>..</sys_name>
+        <sys_package display_value="Backlog Analytics" source="x_417679_bl_analtx">97d1624a07011010d318fd1e7c1ed0a1</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Backlog Analytics">97d1624a07011010d318fd1e7c1ed0a1</sys_scope>
+        <sys_scope_delete display_value="">002343fe7a2a4fc680e3ecd7d23eba04</sys_scope_delete>
+        <sys_update_name>sys_archive_destroy_0c7d218c07595410d318fd1e7c1ed0c5</sys_update_name>
+        <sys_update_version display_value="sys_archive_destroy_0c7d218c07595410d318fd1e7c1ed0c5">090e698c07595410d318fd1e7c1ed061</sys_update_version>
+        <sys_updated_by>Aidan.Lovegrove</sys_updated_by>
+        <sys_updated_on>2020-06-04 18:29:14</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

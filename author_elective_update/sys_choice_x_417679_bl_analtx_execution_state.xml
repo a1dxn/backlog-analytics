@@ -5,6 +5,25 @@
             <element>state</element>
             <hint/>
             <inactive>false</inactive>
+            <label>To be deleted...</label>
+            <language>en</language>
+            <name>x_417679_bl_analtx_execution</name>
+            <sequence/>
+            <sys_created_by>Aidan.Lovegrove</sys_created_by>
+            <sys_created_on>2020-06-04 18:16:08</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>811b25c807595410d318fd1e7c1ed0a4</sys_id>
+            <sys_mod_count>2</sys_mod_count>
+            <sys_updated_by>Aidan.Lovegrove</sys_updated_by>
+            <sys_updated_on>2020-06-04 18:33:20</sys_updated_on>
+            <value>-100</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>state</element>
+            <hint/>
+            <inactive>false</inactive>
             <label>Error</label>
             <language>en</language>
             <name>x_417679_bl_analtx_execution</name>

@@ -8,7 +8,6 @@
         <element label="Name" max_length="40" name="name" type="string"/>
         <element label="Table" mandatory="true" max_length="80" name="table" type="table_name"/>
         <element attributes="types=glide_date_time;glide_date" dependent="table" dependent_on_field="table" label="Trend by" mandatory="true" max_length="80" name="trend_by" type="field_name" use_dependent_field="true"/>
-        <element label="trigger" max_length="40" name="trigger" type="boolean"/>
         <element default="0" label="Execution Count" max_length="40" name="x_count" read_only="true" type="integer"/>
         <index name="index">
             <element name="auto_execution"/>
