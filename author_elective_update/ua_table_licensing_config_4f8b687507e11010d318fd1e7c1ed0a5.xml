@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="ua_table_licensing_config">
+    <ua_table_licensing_config action="DELETE">
+        <is_fulfillment>false</is_fulfillment>
+        <license_condition/>
+        <license_model>none</license_model>
+        <license_roles/>
+        <name>x_417679_bl_analtx_log</name>
+        <op_delete>true</op_delete>
+        <op_insert>true</op_insert>
+        <op_update>true</op_update>
+        <owner_condition/>
+        <sys_class_name>ua_table_licensing_config</sys_class_name>
+        <sys_created_by>Aidan.Lovegrove</sys_created_by>
+        <sys_created_on>2020-06-22 10:23:25</sys_created_on>
+        <sys_id>4f8b687507e11010d318fd1e7c1ed0a5</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_417679_bl_analtx_log</sys_name>
+        <sys_package display_value="Backlog Analytics" source="x_417679_bl_analtx">97d1624a07011010d318fd1e7c1ed0a1</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Backlog Analytics">97d1624a07011010d318fd1e7c1ed0a1</sys_scope>
+        <sys_update_name>ua_table_licensing_config_4f8b687507e11010d318fd1e7c1ed0a5</sys_update_name>
+        <sys_updated_by>Aidan.Lovegrove</sys_updated_by>
+        <sys_updated_on>2020-06-22 10:23:25</sys_updated_on>
+    </ua_table_licensing_config>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Backlog Analytics">97d1624a07011010d318fd1e7c1ed0a1</application>
+        <file_path/>
+        <instance_id>90ea7229dba17f04387021c4059619f4</instance_id>
+        <instance_name>dev85960</instance_name>
+        <name>ua_table_licensing_config_4f8b687507e11010d318fd1e7c1ed0a5</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="ua_table_licensing_config"><ua_table_licensing_config action="INSERT_OR_UPDATE"><is_fulfillment>false</is_fulfillment><license_condition/><license_model>none</license_model><license_roles/><name>x_417679_bl_analtx_log</name><op_delete>true</op_delete><op_insert>true</op_insert><op_update>true</op_update><owner_condition/><sys_class_name>ua_table_licensing_config</sys_class_name><sys_created_by>Aidan.Lovegrove</sys_created_by><sys_created_on>2020-06-22 10:23:25</sys_created_on><sys_id>4f8b687507e11010d318fd1e7c1ed0a5</sys_id><sys_mod_count>0</sys_mod_count><sys_name>x_417679_bl_analtx_log</sys_name><sys_package display_value="Backlog Analytics" source="x_417679_bl_analtx">97d1624a07011010d318fd1e7c1ed0a1</sys_package><sys_policy/><sys_scope display_value="Backlog Analytics">97d1624a07011010d318fd1e7c1ed0a1</sys_scope><sys_update_name>ua_table_licensing_config_4f8b687507e11010d318fd1e7c1ed0a5</sys_update_name><sys_updated_by>Aidan.Lovegrove</sys_updated_by><sys_updated_on>2020-06-22 10:23:25</sys_updated_on></ua_table_licensing_config></record_update>]]></payload>
+        <payload_hash>-709103205</payload_hash>
+        <record_name>x_417679_bl_analtx_log</record_name>
+        <reverted_from/>
+        <source>17414e84075d5410d318fd1e7c1ed08a</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>Aidan.Lovegrove</sys_created_by>
+        <sys_created_on>2020-06-22 10:23:25</sys_created_on>
+        <sys_id>4f8b687507e11010d318fd1e7c1ed0c0</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>172db8dd9010000001</sys_recorded_at>
+        <sys_updated_by>Aidan.Lovegrove</sys_updated_by>
+        <sys_updated_on>2020-06-22 10:23:25</sys_updated_on>
+        <type>Table Subscription Configuration</type>
+        <update_guid>878b687596e110108e0dd7b3393772c0</update_guid>
+        <update_guid_history>878b687596e110108e0dd7b3393772c0:-709103205</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>Aidan.Lovegrove</sys_created_by>
+        <sys_created_on>2020-06-22 13:51:30</sys_created_on>
+        <sys_db_object display_value="" name="ua_table_licensing_config">ua_table_licensing_config</sys_db_object>
+        <sys_id>332c1fafb7a64fdc9a2064d311608c90</sys_id>
+        <sys_metadata>4f8b687507e11010d318fd1e7c1ed0a5</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_417679_bl_analtx_log</sys_name>
+        <sys_package display_value="Backlog Analytics" source="x_417679_bl_analtx">97d1624a07011010d318fd1e7c1ed0a1</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Backlog Analytics">97d1624a07011010d318fd1e7c1ed0a1</sys_scope>
+        <sys_scope_delete display_value="">002343fe7a2a4fc680e3ecd7d23eba04</sys_scope_delete>
+        <sys_update_name>ua_table_licensing_config_4f8b687507e11010d318fd1e7c1ed0a5</sys_update_name>
+        <sys_update_version display_value="ua_table_licensing_config_4f8b687507e11010d318fd1e7c1ed0a5">4f8b687507e11010d318fd1e7c1ed0c0</sys_update_version>
+        <sys_updated_by>Aidan.Lovegrove</sys_updated_by>
+        <sys_updated_on>2020-06-22 13:51:30</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

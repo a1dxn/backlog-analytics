@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_relationship">
+    <sys_relationship action="DELETE">
+        <advanced>false</advanced>
+        <apply_to/>
+        <basic_apply_to>x_417679_bl_analtx_execution</basic_apply_to>
+        <basic_query_from>x_417679_bl_analtx_log</basic_query_from>
+        <insert_callback/>
+        <name>Logs</name>
+        <query_from/>
+        <query_with><![CDATA[(function refineQuery(current, parent) {
+
+	current.addQuery('source='+current.sys_id);
+	current.orderByDesc('ms');
+
+})(current, parent);]]></query_with>
+        <reference_field/>
+        <related_list/>
+        <simple_reference>false</simple_reference>
+        <sys_class_name>sys_relationship</sys_class_name>
+        <sys_created_by>Aidan.Lovegrove</sys_created_by>
+        <sys_created_on>2020-06-22 10:49:44</sys_created_on>
+        <sys_id>9961b8bd07e11010d318fd1e7c1ed0e7</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Logs</sys_name>
+        <sys_package display_value="Backlog Analytics" source="x_417679_bl_analtx">97d1624a07011010d318fd1e7c1ed0a1</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Backlog Analytics">97d1624a07011010d318fd1e7c1ed0a1</sys_scope>
+        <sys_update_name>sys_relationship_9961b8bd07e11010d318fd1e7c1ed0e7</sys_update_name>
+        <sys_updated_by>Aidan.Lovegrove</sys_updated_by>
+        <sys_updated_on>2020-06-22 10:49:44</sys_updated_on>
+    </sys_relationship>
+    <sys_translated_text action="DELETE" query="documentkey=9961b8bd07e11010d318fd1e7c1ed0e7"/>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Backlog Analytics">97d1624a07011010d318fd1e7c1ed0a1</application>
+        <file_path/>
+        <instance_id>90ea7229dba17f04387021c4059619f4</instance_id>
+        <instance_name>dev85960</instance_name>
+        <name>sys_relationship_9961b8bd07e11010d318fd1e7c1ed0e7</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update table="sys_relationship"&gt;&lt;sys_relationship action="INSERT_OR_UPDATE"&gt;&lt;advanced&gt;false&lt;/advanced&gt;&lt;apply_to/&gt;&lt;basic_apply_to&gt;x_417679_bl_analtx_execution&lt;/basic_apply_to&gt;&lt;basic_query_from&gt;x_417679_bl_analtx_log&lt;/basic_query_from&gt;&lt;insert_callback/&gt;&lt;name&gt;Logs&lt;/name&gt;&lt;query_from/&gt;&lt;query_with&gt;&lt;![CDATA[(function refineQuery(current, parent) {
+
+	current.addQuery('source='+current.sys_id);
+	current.orderByDesc('ms');
+
+})(current, parent);]]&gt;&lt;/query_with&gt;&lt;reference_field/&gt;&lt;related_list/&gt;&lt;simple_reference&gt;false&lt;/simple_reference&gt;&lt;sys_class_name&gt;sys_relationship&lt;/sys_class_name&gt;&lt;sys_created_by&gt;Aidan.Lovegrove&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2020-06-22 10:49:44&lt;/sys_created_on&gt;&lt;sys_id&gt;9961b8bd07e11010d318fd1e7c1ed0e7&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_name&gt;Logs&lt;/sys_name&gt;&lt;sys_package display_value="Backlog Analytics" source="x_417679_bl_analtx"&gt;97d1624a07011010d318fd1e7c1ed0a1&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="Backlog Analytics"&gt;97d1624a07011010d318fd1e7c1ed0a1&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_relationship_9961b8bd07e11010d318fd1e7c1ed0e7&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;Aidan.Lovegrove&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2020-06-22 10:49:44&lt;/sys_updated_on&gt;&lt;/sys_relationship&gt;&lt;sys_translated_text action="delete_multiple" query="documentkey=9961b8bd07e11010d318fd1e7c1ed0e7"/&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>-18900220</payload_hash>
+        <record_name>Logs</record_name>
+        <reverted_from/>
+        <source>17414e84075d5410d318fd1e7c1ed08a</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>Aidan.Lovegrove</sys_created_by>
+        <sys_created_on>2020-06-22 10:49:44</sys_created_on>
+        <sys_id>1c9178bd07e11010d318fd1e7c1ed0de</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>172dba5ef2a0000001</sys_recorded_at>
+        <sys_updated_by>Aidan.Lovegrove</sys_updated_by>
+        <sys_updated_on>2020-06-22 10:49:44</sys_updated_on>
+        <type>Relationship</type>
+        <update_guid>549178bd10e11010edbe1ecae1119fde</update_guid>
+        <update_guid_history>549178bd10e11010edbe1ecae1119fde:-18900220</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>Aidan.Lovegrove</sys_created_by>
+        <sys_created_on>2020-06-22 13:51:14</sys_created_on>
+        <sys_db_object display_value="" name="sys_relationship">sys_relationship</sys_db_object>
+        <sys_id>5ad17b87c12b4a60b40a6a12a931a440</sys_id>
+        <sys_metadata>9961b8bd07e11010d318fd1e7c1ed0e7</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Logs</sys_name>
+        <sys_package display_value="Backlog Analytics" source="x_417679_bl_analtx">97d1624a07011010d318fd1e7c1ed0a1</sys_package>
+        <sys_parent display_value="BA Execution">a8f47ec207811010d318fd1e7c1ed0ef</sys_parent>
+        <sys_policy/>
+        <sys_scope display_value="Backlog Analytics">97d1624a07011010d318fd1e7c1ed0a1</sys_scope>
+        <sys_scope_delete display_value="">002343fe7a2a4fc680e3ecd7d23eba04</sys_scope_delete>
+        <sys_update_name>sys_relationship_9961b8bd07e11010d318fd1e7c1ed0e7</sys_update_name>
+        <sys_update_version display_value="sys_relationship_9961b8bd07e11010d318fd1e7c1ed0e7">1c9178bd07e11010d318fd1e7c1ed0de</sys_update_version>
+        <sys_updated_by>Aidan.Lovegrove</sys_updated_by>
+        <sys_updated_on>2020-06-22 13:51:14</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>
