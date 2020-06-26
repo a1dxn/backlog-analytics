@@ -18,6 +18,9 @@
         <new_condition/>
         <new_roles>report_admin,admin</new_roles>
         <omit_columns_if_empty>true</omit_columns_if_empty>
+        <omit_count>false</omit_count>
+        <omit_count_views>false</omit_count_views>
+        <omit_count_views_list/>
         <omit_drilldown_link>false</omit_drilldown_link>
         <omit_edit_button>true</omit_edit_button>
         <omit_filters>false</omit_filters>
@@ -31,7 +34,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>15a2404007dd1410d318fd1e7c1ed046</sys_id>
-        <sys_mod_count>2</sys_mod_count>
+        <sys_mod_count>5</sys_mod_count>
         <sys_name>x_417679_bl_analtx_definition</sys_name>
         <sys_overrides display_value="">global</sys_overrides>
         <sys_package display_value="Backlog Analytics" source="x_417679_bl_analtx">97d1624a07011010d318fd1e7c1ed0a1</sys_package>
@@ -39,6 +42,6 @@
         <sys_scope display_value="Backlog Analytics">97d1624a07011010d318fd1e7c1ed0a1</sys_scope>
         <sys_update_name>sys_ui_list_control_15a2404007dd1410d318fd1e7c1ed046</sys_update_name>
         <sys_updated_by>Aidan.Lovegrove</sys_updated_by>
-        <sys_updated_on>2020-06-04 10:44:15</sys_updated_on>
+        <sys_updated_on>2020-06-26 11:31:29</sys_updated_on>
     </sys_ui_list_control>
 </record_update>

@@ -1,12 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
-    <element label="BA Data" max_length="40" name="x_417679_bl_analtx_data" type="collection">
+    <element label="BA Data" max_length="40" name="x_417679_bl_analtx_data" sizeclass="204" type="collection">
         <element default="0" label="Count" max_length="40" name="count" read_only="true" type="integer"/>
         <element label="Value" max_length="150" name="display_value" read_only="true" type="string"/>
         <element label="Execution" max_length="32" name="execution" read_only="true" reference="x_417679_bl_analtx_execution" reference_cascade_rule="cascade" type="reference"/>
         <element label="Field Value" max_length="40" name="field_value" type="string"/>
+        <element label="Record Note" max_length="4000" name="record_note" read_only="true" type="journal_input"/>
+        <element dependent="record_note" dependent_on_field="record_note" label="Record Notes" max_length="4000" name="record_notes" type="journal_list" use_dependent_field="true"/>
         <element dependent="table_value" dependent_on_field="table_value" label="Value Record" max_length="32" name="record_value" read_only="true" type="document_id" use_dependent_field="true"/>
         <element label="Value Table" max_length="80" name="table_value" type="table_name"/>
-        <element label="Trend" max_length="32" name="trend" reference="x_417679_bl_analtx_execution_trend" reference_cascade_rule="restrict" reference_qual="execution=javascript:current.execution^EQ" type="reference" use_reference_qualifier="advanced"/>
+        <element label="Trend" max_length="32" name="trend" reference="x_417679_bl_analtx_execution_trend" reference_cascade_rule="restrict" reference_qual="execution=javascript:current.execution^EQ" reference_qual_condition="execution=javascript:current.execution^EQ" type="reference"/>
         <index name="index">
             <element name="execution"/>
         </index>

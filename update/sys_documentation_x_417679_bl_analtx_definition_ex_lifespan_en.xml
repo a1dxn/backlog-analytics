@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_documentation element="ex_lifespan" label="Execution Time to Live" language="en" table="x_417679_bl_analtx_definition">
+        <sys_documentation action="INSERT_OR_UPDATE">
+            <element>ex_lifespan</element>
+            <help>To the nearest hour</help>
+            <hint>To the nearest hour</hint>
+            <label>Execution Time to Live</label>
+            <language>en</language>
+            <name>x_417679_bl_analtx_definition</name>
+            <plural>Execution Time to Lives</plural>
+            <sys_class_name>sys_documentation</sys_class_name>
+            <sys_created_by>Aidan.Lovegrove</sys_created_by>
+            <sys_created_on>2020-06-26 10:32:22</sys_created_on>
+            <sys_id>11f39d0707211010d318fd1e7c1ed069</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_name>Execution Time to Live</sys_name>
+            <sys_package display_value="Backlog Analytics" source="x_417679_bl_analtx">97d1624a07011010d318fd1e7c1ed0a1</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Backlog Analytics">97d1624a07011010d318fd1e7c1ed0a1</sys_scope>
+            <sys_update_name>sys_documentation_x_417679_bl_analtx_definition_ex_lifespan_en</sys_update_name>
+            <sys_updated_by>Aidan.Lovegrove</sys_updated_by>
+            <sys_updated_on>2020-06-26 10:34:31</sys_updated_on>
+            <url/>
+            <url_target/>
+        </sys_documentation>
+    </sys_documentation>
+</record_update>

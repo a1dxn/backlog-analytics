@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
-    <element label="BA M2m Data Tasks" max_length="40" name="x_417679_bl_analtx_m2m_data_tasks" type="collection">
+    <element label="BA M2m Data Tasks" max_length="40" name="x_417679_bl_analtx_m2m_data_tasks" sizeclass="2890" type="collection">
         <element attributes="encode_utf8=false" label="Backlog Analytic Result" max_length="32" name="bl_analtx_data" reference="x_417679_bl_analtx_data" reference_cascade_rule="cascade" type="reference"/>
         <element attributes="encode_utf8=false" label="Task" max_length="32" name="task" reference="task" reference_cascade_rule="none" type="reference"/>
         <element default="javascript:current.task.number;" label="Number" max_length="40" name="task_number" read_only="true" type="string"/>
