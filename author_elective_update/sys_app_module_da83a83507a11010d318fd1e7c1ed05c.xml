@@ -65,7 +65,7 @@
         <update_guid_history>fdb328b1a1a110100a24770f3534b200:241466679</update_guid_history>
     </sys_update_version>
     <sys_metadata_delete action="INSERT_OR_UPDATE">
-        <sys_audit_delete display_value="Properties">4a41aa8f07e11010d318fd1e7c1ed024</sys_audit_delete>
+        <sys_audit_delete display_value="">4a41aa8f07e11010d318fd1e7c1ed024</sys_audit_delete>
         <sys_class_name>sys_metadata_delete</sys_class_name>
         <sys_created_by>Aidan.Lovegrove</sys_created_by>
         <sys_created_on>2020-06-26 16:10:12</sys_created_on>

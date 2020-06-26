@@ -65,7 +65,7 @@
         <update_guid_history>8aa22eca66011010e864c568e432399e:1709755776</update_guid_history>
     </sys_update_version>
     <sys_metadata_delete action="INSERT_OR_UPDATE">
-        <sys_audit_delete display_value="Backlog Analytic Execution">e722ca08075d5410d318fd1e7c1ed0e7</sys_audit_delete>
+        <sys_audit_delete display_value="">e722ca08075d5410d318fd1e7c1ed0e7</sys_audit_delete>
         <sys_class_name>sys_metadata_delete</sys_class_name>
         <sys_created_by>Aidan.Lovegrove</sys_created_by>
         <sys_created_on>2020-06-04 19:56:52</sys_created_on>

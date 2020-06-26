@@ -65,7 +65,7 @@
         <update_guid_history>726a042b39cd9010441d803f1921ec73:-1809503468,9ecf446a26c55010238ae766f0b3f574:-62976908,48c4628eed011010bce844a75bc43cbc:-1377604532</update_guid_history>
     </sys_update_version>
     <sys_metadata_delete action="INSERT_OR_UPDATE">
-        <sys_audit_delete display_value="BA Data">61d10608075d5410d318fd1e7c1ed09b</sys_audit_delete>
+        <sys_audit_delete display_value="">61d10608075d5410d318fd1e7c1ed09b</sys_audit_delete>
         <sys_class_name>sys_metadata_delete</sys_class_name>
         <sys_created_by>Aidan.Lovegrove</sys_created_by>
         <sys_created_on>2020-06-04 19:55:21</sys_created_on>

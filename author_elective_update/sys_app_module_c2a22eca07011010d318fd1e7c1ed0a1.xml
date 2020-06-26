@@ -65,7 +65,7 @@
         <update_guid_history>82a22ecaca011010ea41d81a1ee5e5a2:-1818641927</update_guid_history>
     </sys_update_version>
     <sys_metadata_delete action="INSERT_OR_UPDATE">
-        <sys_audit_delete display_value="All">c3a47ac207811010d318fd1e7c1ed0c0</sys_audit_delete>
+        <sys_audit_delete display_value="">c3a47ac207811010d318fd1e7c1ed0c0</sys_audit_delete>
         <sys_class_name>sys_metadata_delete</sys_class_name>
         <sys_created_by>Aidan.Lovegrove</sys_created_by>
         <sys_created_on>2020-05-29 18:29:37</sys_created_on>

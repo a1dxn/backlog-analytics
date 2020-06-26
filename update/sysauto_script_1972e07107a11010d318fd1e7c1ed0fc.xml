@@ -6,7 +6,7 @@
         <conditional>false</conditional>
         <entered_time/>
         <name>Auto Flush of Backlog Analytic Executions</name>
-        <run_as display_value="Aidan Lovegrove">f6237b0e07f4d010d318fd1e7c1ed021</run_as>
+        <run_as display_value="Aidan Lovegrove">bb89224307e110104a9cf48f7c1ed04c</run_as>
         <run_as_tz/>
         <run_dayofmonth>1</run_dayofmonth>
         <run_dayofweek>1</run_dayofweek>
@@ -18,9 +18,9 @@
 def.addQuery("ex_lifespanISNOTEMPTY");
 def.query();
 while(def.next()) {
-	var lifespan = new GlideDateTime(def.getValue('ex_lifespan')).getNumericValue() / 1000 / 60 / 60; //in hours from milliseconds
+	var lifespan       = new GlideDateTime(def.getValue('ex_lifespan')).getNumericValue()/1000/60/60; //in hours from milliseconds
 	var deletedRecords = [];
-	
+
 	var ex = new GlideRecord('x_417679_bl_analtx_execution');
 	ex.addQuery('auto_report=false^definition='+def.getUniqueValue()+'^sys_created_onRELATIVELE@hour@ago@'+lifespan);
 	ex.query();
@@ -28,21 +28,23 @@ while(def.next()) {
 		deletedRecords.push(ex.getValue('number'));
 		ex.deleteRecord();
 	}
-	
-	gs.info('Auto Flush of Backlog Analytic Executions has flushed a total of '+deletedRecords.length+' records from definition \''+def.name+'\'\n'+deletedRecords.toString());
-}]]></script>
+
+	gs.info(
+		'Auto Flush of Backlog Analytic Executions has flushed a total of '+deletedRecords.length+' records from definition \''+def.name+'\'\n'+deletedRecords.toString());
+}
+]]></script>
         <sys_class_name>sysauto_script</sys_class_name>
         <sys_created_by>Aidan.Lovegrove</sys_created_by>
         <sys_created_on>2020-06-22 10:01:15</sys_created_on>
         <sys_id>1972e07107a11010d318fd1e7c1ed0fc</sys_id>
-        <sys_mod_count>19</sys_mod_count>
+        <sys_mod_count>20</sys_mod_count>
         <sys_name>Auto Flush of Backlog Analytic Executions</sys_name>
         <sys_package display_value="Backlog Analytics" source="x_417679_bl_analtx">97d1624a07011010d318fd1e7c1ed0a1</sys_package>
         <sys_policy/>
         <sys_scope display_value="Backlog Analytics">97d1624a07011010d318fd1e7c1ed0a1</sys_scope>
         <sys_update_name>sysauto_script_1972e07107a11010d318fd1e7c1ed0fc</sys_update_name>
         <sys_updated_by>Aidan.Lovegrove</sys_updated_by>
-        <sys_updated_on>2020-06-26 15:55:36</sys_updated_on>
+        <sys_updated_on>2020-06-26 22:35:58</sys_updated_on>
         <time_zone/>
         <upgrade_safe>false</upgrade_safe>
     </sysauto_script>

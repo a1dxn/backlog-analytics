@@ -178,7 +178,7 @@
         <update_guid_history>afd039ba718510101f835528937d4a6d:278564584,77903d7afa851010567598de60ae1699:-1580800692</update_guid_history>
     </sys_update_version>
     <sys_metadata_delete action="INSERT_OR_UPDATE">
-        <sys_audit_delete display_value="Incidents by Technology Group - 2020-05-31 18:22:08">b56131fa07851010d318fd1e7c1ed088</sys_audit_delete>
+        <sys_audit_delete display_value="">b56131fa07851010d318fd1e7c1ed088</sys_audit_delete>
         <sys_class_name>sys_metadata_delete</sys_class_name>
         <sys_created_by>Aidan.Lovegrove</sys_created_by>
         <sys_created_on>2020-05-31 21:31:10</sys_created_on>

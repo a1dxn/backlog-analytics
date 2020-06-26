@@ -29,30 +29,31 @@
         <onclick/>
         <order>100</order>
         <script><![CDATA[doInsertAndStay();
+
 function doInsertAndStay() {
-	var saveMe = current;
-	var onMetadataForm = current.getTableName() == "sys_metadata";
+	var saveMe         = current;
+	var onMetadataForm = current.getTableName()=="sys_metadata";
 	if(onMetadataForm) {
 		// get actual record and copy over the changed sys_metadata values
 		var gr = new GlideRecord(current.sys_class_name.toString());
 		gr.get(current.sys_id.toString());
-		var elements = current.getElements();
+		var elements    = current.getElements();
 		var numElements = elements.size();
-		for(var i = 0; i < numElements; i++) {
+		for(var i = 0; i<numElements; i++) {
 			var element = elements.get(i);
 			if(element.changes())
 				gr.setValue(element.getName().toString(), current.getValue(element.getName().toString()));
 		}
 		current = gr;
 	}
-	if (typeof current.number != 'undefined' && current.number)
+	if(typeof current.number!='undefined' && current.number)
 		current.number = ""; // generate a new number
-	else if (typeof current.u_number != 'undefined' && current.u_number)
+	else if(typeof current.u_number!='undefined' && current.u_number)
 		current.u_number = ""; // generate a new number
 	current.sys_scope = gs.getCurrentApplicationId();
-	var id = current.insert();
+	var id            = current.insert();
 	if(onMetadataForm)
-		saveMe = "sys_metadata.do?sysparm_ignore_class=true&sys_id=" + id;
+		saveMe = "sys_metadata.do?sysparm_ignore_class=true&sys_id="+id;
 	action.setRedirectURL(saveMe);
 }
 ]]></script>
@@ -66,7 +67,7 @@ function doInsertAndStay() {
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>6af0e13307451410d318fd1e7c1ed0c5</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_mod_count>1</sys_mod_count>
         <sys_name>Insert and Stay</sys_name>
         <sys_overrides/>
         <sys_package display_value="Backlog Analytics" source="x_417679_bl_analtx">97d1624a07011010d318fd1e7c1ed0a1</sys_package>
@@ -74,7 +75,7 @@ function doInsertAndStay() {
         <sys_scope display_value="Backlog Analytics">97d1624a07011010d318fd1e7c1ed0a1</sys_scope>
         <sys_update_name>sys_ui_action_6af0e13307451410d318fd1e7c1ed0c5</sys_update_name>
         <sys_updated_by>Aidan.Lovegrove</sys_updated_by>
-        <sys_updated_on>2020-06-03 22:53:19</sys_updated_on>
+        <sys_updated_on>2020-06-26 22:35:57</sys_updated_on>
         <table>x_417679_bl_analtx_execution</table>
         <ui11_compatible>false</ui11_compatible>
         <ui16_compatible>false</ui16_compatible>

@@ -18,7 +18,7 @@
         <sys_update_name>sys_restricted_caller_access_c752bbff074d1410d318fd1e7c1ed076</sys_update_name>
         <sys_updated_by>Aidan.Lovegrove</sys_updated_by>
         <sys_updated_on>2020-06-04 09:28:30</sys_updated_on>
-        <target name="x_417679_bl_analtx_execution_trend" target_table="sys_db_object">72b0b5cb07855010d318fd1e7c1ed0d3</target>
+        <target>72b0b5cb07855010d318fd1e7c1ed0d3</target>
         <target_scope display_value="Backlog Analytics">97d1624a07011010d318fd1e7c1ed0a1</target_scope>
         <target_table>sys_db_object</target_table>
         <target_type>1</target_type>

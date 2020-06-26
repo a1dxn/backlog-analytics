@@ -42,7 +42,7 @@
         <update_guid_history>9d6da07934e11010b3f400bb3d7e4d7c:739176235</update_guid_history>
     </sys_update_version>
     <sys_metadata_delete action="INSERT_OR_UPDATE">
-        <sys_audit_delete display_value="x_417679_bl_analtx_log.nobody">8a2b5df507a51010d318fd1e7c1ed0ae</sys_audit_delete>
+        <sys_audit_delete display_value="">8a2b5df507a51010d318fd1e7c1ed0ae</sys_audit_delete>
         <sys_class_name>sys_metadata_delete</sys_class_name>
         <sys_created_by>Aidan.Lovegrove</sys_created_by>
         <sys_created_on>2020-06-22 13:51:26</sys_created_on>

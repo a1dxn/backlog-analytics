@@ -3,7 +3,7 @@
         <sys_ui_list_element action="INSERT_OR_UPDATE">
             <average_value>false</average_value>
             <element>name</element>
-            <list_id display_value="x_417679_bl_analtx_definition" element="NULL" name="x_417679_bl_analtx_definition" parent="NULL" relationship="NULL" sys_domain="global" view="73570251983100107f2c2ed01a1f16bc">4c68fa8607811010d318fd1e7c1ed0e7</list_id>
+            <list_id display_value="x_417679_bl_analtx_definition" element="NULL" name="x_417679_bl_analtx_definition" parent="NULL" relationship="NULL" sys_domain="global" view="c42222431b21101019d97596cc4bcb6c">4c68fa8607811010d318fd1e7c1ed0e7</list_id>
             <max_value>false</max_value>
             <min_value>false</min_value>
             <position>0</position>
@@ -40,7 +40,7 @@
             <sys_updated_by>Aidan.Lovegrove</sys_updated_by>
             <sys_updated_on>2020-05-29 18:45:47</sys_updated_on>
             <sys_user/>
-            <view display_value="Reference List" name="sys_ref_list">73570251983100107f2c2ed01a1f16bc</view>
+            <view display_value="Reference List" name="sys_ref_list">c42222431b21101019d97596cc4bcb6c</view>
             <view_name/>
         </sys_ui_list>
     </sys_ui_list>
